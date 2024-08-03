@@ -6,7 +6,6 @@ import Modal from "@/components/Modal";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Swap from "../contracts/swap.json";
-import SeedInput from "./SeedInput";
 
 import { swap } from "../server-actions";
 declare global {
@@ -16,13 +15,10 @@ declare global {
 }
 
 export default function AmmInterface() {
-  const [originalTokenAddress, setOriginalTokenAddress] = useState<string>();
-  const [destinationTokenAddress, setDestinationTokenAddress] =
-    useState<string>();
   const [account, setAccount] = useState<string | null>(null);
   const [contract, setContract] = useState<ethers.Contract | null>(null);
   const [showPopUp, setShowPopUp] = useState<boolean>(false);
-  const [chainId, setChainId] = useState<bigint>(1);
+  const [chainId, setChainId] = useState<string>("1");
 
   const showModal = () => setShowPopUp(true);
   const hideModal = () => setShowPopUp(false);
@@ -57,18 +53,6 @@ export default function AmmInterface() {
     }
   };
 
-  const handleSwap = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-
-    // ...
-    //
-    //
-
-    const result = await swap(formData);
-    console.log(result);
-  };
-
   return (
     <div>
       <Navbar account={account} />
@@ -76,10 +60,23 @@ export default function AmmInterface() {
         {account ? (
           <div>
             <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-              <form className="mb-4" onSubmit={handleSwap}>
+              <form className="mb-4" action={swap}>
+                <input
+                  hidden
+                  defaultValue={account}
+                  name="account"
+                  type="text"
+                  id="account"
+                />
                 <TokenInput token="WETH" name="originalToken" />
                 <TokenInput token="JBTKN" name="destinationToken" />
-                <SeedInput name="seed" />
+                <input
+                  id="seed"
+                  name="seed"
+                  type="text"
+                  placeholder="seed"
+                  className="block flex-1 border-1 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                />
                 <div className="flex items-center justify-between">
                   <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
