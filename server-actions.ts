@@ -14,11 +14,11 @@ import { signPermitSigature } from "ethers-js-permit";
 //   result.s
 // )
 
-export async function swap(formData: FormData) {
+export async function swap(sig: JSON) {
   // const seed = formData.get("seed");
   // const originalToken = formData.get("originalToken");
   // const destinationToken = formData.get("destinationToken");
   //
-  console.log(Object.fromEntries(formData.entries()));
+  console.log(sig);
   return 5;
 }
