@@ -1,0 +1,308 @@
+{
+  "address": "0x123123",
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        { "name": "_zkVerifier", "type": "address", "internalType": "address" }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "executeBurn",
+      "inputs": [
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount2", "type": "uint256", "internalType": "uint256" },
+        { "name": "token1", "type": "address", "internalType": "address" },
+        { "name": "token2", "type": "address", "internalType": "address" },
+        {
+          "name": "operationType",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct PiLeftCore.PermitData",
+          "components": [
+            { "name": "owner", "type": "address", "internalType": "address" },
+            { "name": "spender", "type": "address", "internalType": "address" },
+            { "name": "value", "type": "uint256", "internalType": "uint256" },
+            {
+              "name": "deadline",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            { "name": "v", "type": "uint8", "internalType": "uint8" },
+            { "name": "r", "type": "bytes32", "internalType": "bytes32" },
+            { "name": "s", "type": "bytes32", "internalType": "bytes32" }
+          ]
+        },
+        { "name": "proofHash", "type": "bytes32", "internalType": "bytes32" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "executeMint",
+      "inputs": [
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount2", "type": "uint256", "internalType": "uint256" },
+        { "name": "token1", "type": "address", "internalType": "address" },
+        { "name": "token2", "type": "address", "internalType": "address" },
+        {
+          "name": "operationType",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct PiLeftCore.PermitData",
+          "components": [
+            { "name": "owner", "type": "address", "internalType": "address" },
+            { "name": "spender", "type": "address", "internalType": "address" },
+            { "name": "value", "type": "uint256", "internalType": "uint256" },
+            {
+              "name": "deadline",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            { "name": "v", "type": "uint8", "internalType": "uint8" },
+            { "name": "r", "type": "bytes32", "internalType": "bytes32" },
+            { "name": "s", "type": "bytes32", "internalType": "bytes32" }
+          ]
+        },
+        {
+          "name": "params2",
+          "type": "tuple",
+          "internalType": "struct PiLeftCore.PermitData",
+          "components": [
+            { "name": "owner", "type": "address", "internalType": "address" },
+            { "name": "spender", "type": "address", "internalType": "address" },
+            { "name": "value", "type": "uint256", "internalType": "uint256" },
+            {
+              "name": "deadline",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            { "name": "v", "type": "uint8", "internalType": "uint8" },
+            { "name": "r", "type": "bytes32", "internalType": "bytes32" },
+            { "name": "s", "type": "bytes32", "internalType": "bytes32" }
+          ]
+        },
+        { "name": "proofHash", "type": "bytes32", "internalType": "bytes32" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "executeSwap",
+      "inputs": [
+        { "name": "amount1", "type": "uint256", "internalType": "uint256" },
+        { "name": "amount2", "type": "uint256", "internalType": "uint256" },
+        { "name": "token1", "type": "address", "internalType": "address" },
+        { "name": "token2", "type": "address", "internalType": "address" },
+        {
+          "name": "operationType",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "params",
+          "type": "tuple",
+          "internalType": "struct PiLeftCore.PermitData",
+          "components": [
+            { "name": "owner", "type": "address", "internalType": "address" },
+            { "name": "spender", "type": "address", "internalType": "address" },
+            { "name": "value", "type": "uint256", "internalType": "uint256" },
+            {
+              "name": "deadline",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            { "name": "v", "type": "uint8", "internalType": "uint8" },
+            { "name": "r", "type": "bytes32", "internalType": "bytes32" },
+            { "name": "s", "type": "bytes32", "internalType": "bytes32" }
+          ]
+        },
+        { "name": "proofHash", "type": "bytes32", "internalType": "bytes32" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "factoryAddress",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "initiateSwap",
+      "inputs": [{ "name": "proof", "type": "bytes", "internalType": "bytes" }],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "nonces",
+      "inputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "pairs",
+      "inputs": [
+        { "name": "", "type": "address", "internalType": "address" },
+        { "name": "", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "proofs",
+      "inputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "outputs": [
+        { "name": "proof", "type": "bytes", "internalType": "bytes" },
+        { "name": "timestamp", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "setFactory",
+      "inputs": [
+        { "name": "fac", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "zkVerifier",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract IUltraVerifier"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "BurnExecuted",
+      "inputs": [
+        {
+          "name": "timeStamp",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "initiator",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "MintExecuted",
+      "inputs": [
+        {
+          "name": "timeStamp",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "initiator",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount1",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "amount2",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "SetProof",
+      "inputs": [
+        {
+          "name": "timeStamp",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "initiator",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "SwapExecuted",
+      "inputs": [
+        {
+          "name": "timeStamp",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "initiator",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amountIn",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "amountOut",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    { "type": "error", "name": "InvalidProof", "inputs": [] }
+  ]
+}
