@@ -28,6 +28,7 @@ interface SeedInputProps {
         </label>
         <div className="relative mt-2 rounded-md shadow-sm mb-5">
           <input
+            required
             id="seed"
             name="seed"
             type="text"

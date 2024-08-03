@@ -72,7 +72,7 @@ export default function AmmInterface() {
   return (
     <div>
       <Navbar account={account} />
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 w-1/2">
         {account ? (
           <div>
             <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

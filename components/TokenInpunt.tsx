@@ -32,6 +32,7 @@ const TokenInput: React.FC<TokenInputProps> = ({ token, name }) => {
           <span className="text-gray-500 sm:text-sm">$</span>
         </div>
         <input
+          required
           id="price"
           name={`${name}Value`}
           type="text"
