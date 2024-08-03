@@ -6,6 +6,7 @@ import Modal from "@/components/Modal";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Swap from "../contracts/swap.json";
+import SeedInput from "./SeedInput";
 
 import { swap } from "../server-actions";
 declare global {
@@ -68,13 +69,7 @@ export default function AmmInterface() {
                 />
                 <TokenInput token="WETH" name="originalToken" />
                 <TokenInput token="JBTKN" name="destinationToken" />
-                <input
-                  id="seed"
-                  name="seed"
-                  type="text"
-                  placeholder="seed"
-                  className="block flex-1 border-1 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                />
+                <SeedInput name="seed" />
                 <div className="flex items-center justify-between">
                   <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
