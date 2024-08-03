@@ -11,7 +11,9 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "@tailwindcss/forms": "^0.5.7",
     "ethers": "^6.13.2",
+    "ethers-js-permit": "^1.0.3",
     "heroicons": "^2.1.5",
     "next": "14.2.5",
     "react": "^18",

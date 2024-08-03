@@ -1,10 +1,8 @@
-import AMMInterface from '../components/AmmInterface'
-import Navbar from '../components/navbar'
+import AMMInterface from "../components/AmmInterface";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <AMMInterface />
     </main>
   );
